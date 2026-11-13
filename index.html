@@ -8,25 +8,42 @@
   <link rel="icon" href="data:,">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..800;1,14..32,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header & Navigation -->
   <header class="site-header" id="site-header">
     <div class="header-container">
-      <a href="#home" class="wordmark" aria-label="CareSense360 Home">CareSense360</a>
+      <a href="#home" class="brand" aria-label="CareSense360 Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 3v4"/>
+            <path d="M12 17v4"/>
+            <path d="M3 12h4"/>
+            <path d="M17 12h4"/>
+          </svg>
+        </span>
+        <span class="wordmark">CareSense360</span>
+      </a>
       
       <nav class="desktop-nav" aria-label="Primary navigation">
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#platform">Platform</a></li>
-          <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#market-pricing">Market &amp; Pricing</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#platform" class="nav-link">Platform</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#market-pricing" class="nav-link">Market &amp; Pricing</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
         </ul>
-        <a href="#request-a-pilot" class="btn btn-primary nav-cta">Request a Pilot</a>
+        <a href="#request-a-pilot" class="btn btn-primary nav-cta">
+          <span>Request a Pilot</span>
+          <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
       </nav>
 
       <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
@@ -47,7 +64,13 @@
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <div class="mobile-nav-cta">
-        <a href="#request-a-pilot" class="btn btn-primary btn-block">Request a Pilot</a>
+        <a href="#request-a-pilot" class="btn btn-primary btn-block">
+          <span>Request a Pilot</span>
+          <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
       </div>
     </nav>
   </header>
@@ -56,42 +79,110 @@
     <!-- SECTION 1: HOME -->
     <section class="section section-home" id="home" aria-labelledby="home-heading">
       <div class="container hero-container">
-        <div class="hero-content">
+        <div class="hero-content" data-animate="fade-up">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-pill">DECISION SUPPORT FOR UK ADULT SOCIAL CARE</span>
+          </div>
           <h1 id="home-heading" class="hero-title">Spot changes in a resident’s usual routine earlier.</h1>
           <p class="hero-description">
             CareSense360 is being developed to bring care notes, medication records and staffing information together. When observations across shifts suggest a change in a resident’s usual pattern, the platform shows the care team what changed and why it warrants review. A care professional decides what happens next.
           </p>
           <div class="hero-actions">
-            <a href="#request-a-pilot" class="btn btn-primary">Request a Pilot</a>
-            <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+            <a href="#request-a-pilot" class="btn btn-primary btn-lg">
+              <span>Request a Pilot</span>
+              <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#how-it-works" class="btn btn-secondary btn-lg">See How It Works</a>
           </div>
-          <p class="hero-footnote">
-            The initial pilot is planned for two to three West Midlands care homes that already use digital care records.
-          </p>
+          <div class="hero-footnote-wrapper">
+            <div class="footnote-pin" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <p class="hero-footnote">
+              The initial pilot is planned for two to three West Midlands care homes that already use digital care records.
+            </p>
+          </div>
         </div>
 
-        <div class="hero-visual">
+        <div class="hero-visual" data-animate="fade-up" data-delay="150">
           <div class="illustrative-card" aria-label="Illustrative example of carer observations">
-            <div class="illustrative-card-header">
-              <span class="badge badge-neutral">Illustrative example</span>
+            <div class="illustrative-card-topbar">
+              <div class="card-status-indicator">
+                <span class="status-pulse-dot" aria-hidden="true"></span>
+                <span class="status-text">CROSS-SHIFT CORRELATION</span>
+              </div>
+              <span class="badge badge-illustrative">Illustrative example</span>
             </div>
-            <h2 class="illustrative-card-title">A change across shifts</h2>
+
+            <div class="illustrative-card-header">
+              <h2 class="illustrative-card-title">A change across shifts</h2>
+              <span class="illustrative-subtitle">Two correlated shift records flagged for clinical review</span>
+            </div>
+
             <div class="timeline" role="list" aria-label="Shift observations timeline">
+              <!-- Observation 1 -->
               <div class="timeline-item" role="listitem">
-                <div class="timeline-marker" aria-hidden="true"></div>
-                <div class="timeline-content">
+                <div class="timeline-marker-col" aria-hidden="true">
+                  <div class="timeline-icon-node day-node">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="5"></circle>
+                      <line x1="12" y1="1" x2="12" y2="3"></line>
+                      <line x1="12" y1="21" x2="12" y2="23"></line>
+                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                      <line x1="1" y1="12" x2="3" y2="12"></line>
+                      <line x1="21" y1="12" x2="23" y2="12"></line>
+                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                  </div>
+                  <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-content-card">
+                  <div class="timeline-item-meta">
+                    <span class="shift-chip shift-day">Day shift record</span>
+                    <span class="shift-time">Recorded at mealtime review</span>
+                  </div>
                   <p class="timeline-text">Day shift · Breakfast intake lower than usual</p>
                 </div>
               </div>
+
+              <!-- Observation 2 -->
               <div class="timeline-item" role="listitem">
-                <div class="timeline-marker" aria-hidden="true"></div>
-                <div class="timeline-content">
+                <div class="timeline-marker-col" aria-hidden="true">
+                  <div class="timeline-icon-node night-node">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="timeline-content-card">
+                  <div class="timeline-item-meta">
+                    <span class="shift-chip shift-night">Night shift record</span>
+                    <span class="shift-time">Recorded on overnight log</span>
+                  </div>
                   <p class="timeline-text">Night shift · More disturbed nights recorded</p>
                 </div>
               </div>
             </div>
+
+            <!-- Review Note Box -->
             <div class="illustrative-review-box">
-              <span class="review-label">Review note:</span>
+              <div class="review-box-header">
+                <div class="review-icon-wrap" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                  </svg>
+                </div>
+                <span class="review-label">Review note:</span>
+              </div>
               <p class="review-text">A senior carer reviews both observations against the resident’s usual routine and records the outcome.</p>
             </div>
           </div>
@@ -102,28 +193,52 @@
     <!-- SECTION 2: ABOUT -->
     <section class="section section-about" id="about" aria-labelledby="about-heading">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-eyebrow">THE OPERATIONAL CHALLENGE</span>
           <h2 id="about-heading" class="section-title">A clearer picture across care shifts</h2>
         </div>
         
         <div class="about-grid">
-          <div class="about-text-column">
-            <p class="lead-text">
-              A carer may notice that a resident has eaten less breakfast than usual. A colleague on the night shift may record disrupted sleep. Each observation has context of its own. Seeing them together, over several days and alongside the resident’s usual routine, gives a senior carer a clearer basis for deciding whether to follow up.
-            </p>
-            <p class="secondary-text">
-              CareSense360 is designed to work alongside the care-planning, medication and staffing systems a home already uses. Its purpose is to bring relevant observations together, explain emerging changes and help staff follow an agreed action through to its outcome.
-            </p>
+          <div class="about-text-column" data-animate="fade-up" data-delay="100">
+            <div class="lead-quote-card">
+              <p class="lead-text">
+                A carer may notice that a resident has eaten less breakfast than usual. A colleague on the night shift may record disrupted sleep. Each observation has context of its own. Seeing them together, over several days and alongside the resident’s usual routine, gives a senior carer a clearer basis for deciding whether to follow up.
+              </p>
+            </div>
+            <div class="secondary-content-card">
+              <div class="system-role-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                <span>COMPATIBLE WITH EXISTING SYSTEMS</span>
+              </div>
+              <p class="secondary-text">
+                CareSense360 is designed to work alongside the care-planning, medication and staffing systems a home already uses. Its purpose is to bring relevant observations together, explain emerging changes and help staff follow an agreed action through to its outcome.
+              </p>
+            </div>
           </div>
 
-          <div class="founder-card" aria-labelledby="founder-name">
+          <div class="founder-card" aria-labelledby="founder-name" data-animate="fade-up" data-delay="200">
+            <div class="founder-card-decor" aria-hidden="true"></div>
             <div class="founder-header">
+              <div class="founder-monogram" aria-hidden="true">PKD</div>
               <div class="founder-identity">
                 <h3 id="founder-name" class="founder-name">Puneet Kanthera Dhiman</h3>
                 <p class="founder-role">Founder and Director</p>
-                <p class="founder-location">Birmingham, UK</p>
+                <p class="founder-location">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Birmingham, UK</span>
+                </p>
               </div>
             </div>
+
+            <div class="founder-badge-row">
+              <span class="credentials-badge">Coventry University · MSc Data Analytics &amp; Forecasting</span>
+            </div>
+
             <div class="founder-body">
               <p>
                 Puneet Kanthera Dhiman is the sole founder and director of CareSense360. His background includes managing renovation projects, coordinating teams and schedules, overseeing budgets and working directly with clients. He studied International Business Management at Coventry University, with MSc studies covering data analytics and forecasting. His planned responsibilities include business strategy, pilot partnerships and commercial delivery, supported by specialist clinical, software and data professionals.
@@ -137,20 +252,30 @@
     <!-- SECTION 3: PLATFORM -->
     <section class="section section-platform" id="platform" aria-labelledby="platform-heading">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-eyebrow">MODULAR CAPABILITIES</span>
           <h2 id="platform-heading" class="section-title">What the platform will do</h2>
+          <p class="section-intro">
+            A staged, human-centred development roadmap designed specifically for UK care-home workflows.
+          </p>
         </div>
 
         <!-- Phase 1: Initial Pilot (Prominent) -->
-        <div class="platform-phase phase-initial">
+        <div class="platform-phase phase-initial" data-animate="fade-up" data-delay="100">
           <div class="phase-heading-group">
-            <span class="phase-badge phase-badge-highlight">Year 1 · Initial pilot</span>
-            <p class="phase-subtitle">Core modules planned for the initial care-home pilot.</p>
+            <div class="phase-badge-wrap">
+              <span class="phase-badge phase-badge-highlight">Year 1 · Initial pilot</span>
+              <span class="phase-status-tag">CORE PLATFORM SPECIFICATION</span>
+            </div>
+            <p class="phase-subtitle">The three foundation modules deployed for the initial care-home pilot.</p>
           </div>
           <div class="modules-grid pilot-modules">
             <div class="module-card card-featured">
-              <div class="module-header">
+              <div class="module-topbar">
                 <span class="module-number">01</span>
+                <span class="module-phase-tag">INITIAL PILOT</span>
+              </div>
+              <div class="module-header">
                 <h3 class="module-title">Data Intake and Normalisation</h3>
               </div>
               <p class="module-description">
@@ -159,8 +284,11 @@
             </div>
 
             <div class="module-card card-featured">
-              <div class="module-header">
+              <div class="module-topbar">
                 <span class="module-number">02</span>
+                <span class="module-phase-tag">INITIAL PILOT</span>
+              </div>
+              <div class="module-header">
                 <h3 class="module-title">Resident Baseline and Risk Engine</h3>
               </div>
               <p class="module-description">
@@ -169,8 +297,11 @@
             </div>
 
             <div class="module-card card-featured">
-              <div class="module-header">
+              <div class="module-topbar">
                 <span class="module-number">03</span>
+                <span class="module-phase-tag">INITIAL PILOT</span>
+              </div>
+              <div class="module-header">
                 <h3 class="module-title">Human Validation and Task Workflow</h3>
               </div>
               <p class="module-description">
@@ -181,7 +312,7 @@
         </div>
 
         <!-- Expansion Phases (Year 2 & Year 3) -->
-        <div class="platform-expansion-group">
+        <div class="platform-expansion-group" data-animate="fade-up" data-delay="150">
           <!-- Phase 2 -->
           <div class="platform-phase phase-expansion">
             <div class="phase-heading-group">
@@ -189,8 +320,11 @@
             </div>
             <div class="modules-grid expansion-modules">
               <div class="module-card">
-                <div class="module-header">
+                <div class="module-topbar">
                   <span class="module-number">04</span>
+                  <span class="module-phase-tag">PLANNED EXPANSION</span>
+                </div>
+                <div class="module-header">
                   <h3 class="module-title">Smart Inventory and Procurement</h3>
                 </div>
                 <p class="module-description">
@@ -199,8 +333,11 @@
               </div>
 
               <div class="module-card">
-                <div class="module-header">
+                <div class="module-topbar">
                   <span class="module-number">05</span>
+                  <span class="module-phase-tag">PLANNED EXPANSION</span>
+                </div>
+                <div class="module-header">
                   <h3 class="module-title">Maintenance and Compliance Evidence</h3>
                 </div>
                 <p class="module-description">
@@ -217,8 +354,11 @@
             </div>
             <div class="modules-grid expansion-modules single-module">
               <div class="module-card">
-                <div class="module-header">
+                <div class="module-topbar">
                   <span class="module-number">06</span>
+                  <span class="module-phase-tag">PLANNED EXPANSION</span>
+                </div>
+                <div class="module-header">
                   <h3 class="module-title">Family Portal and Outcome Reporting</h3>
                 </div>
                 <p class="module-description">
@@ -234,13 +374,17 @@
     <!-- SECTION 4: HOW IT WORKS -->
     <section class="section section-how-it-works" id="how-it-works" aria-labelledby="how-heading">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-eyebrow">DECISION ARCHITECTURE</span>
           <h2 id="how-heading" class="section-title">From a care note to a reviewed action</h2>
+          <p class="section-intro">
+            A transparent five-step sequence keeping registered managers and senior carers in complete control of clinical decisions.
+          </p>
         </div>
 
         <div class="workflow-steps" role="list" aria-label="CareSense360 decision-support sequence">
           <!-- Step 1 -->
-          <div class="step-card" role="listitem">
+          <div class="step-card" role="listitem" data-animate="fade-up" data-delay="50">
             <div class="step-indicator">
               <span class="step-index">1</span>
             </div>
@@ -253,7 +397,7 @@
           </div>
 
           <!-- Step 2 -->
-          <div class="step-card" role="listitem">
+          <div class="step-card" role="listitem" data-animate="fade-up" data-delay="100">
             <div class="step-indicator">
               <span class="step-index">2</span>
             </div>
@@ -266,7 +410,7 @@
           </div>
 
           <!-- Step 3 -->
-          <div class="step-card" role="listitem">
+          <div class="step-card" role="listitem" data-animate="fade-up" data-delay="150">
             <div class="step-indicator">
               <span class="step-index">3</span>
             </div>
@@ -302,7 +446,7 @@
           </div>
 
           <!-- Step 4 -->
-          <div class="step-card" role="listitem">
+          <div class="step-card" role="listitem" data-animate="fade-up" data-delay="200">
             <div class="step-indicator">
               <span class="step-index">4</span>
             </div>
@@ -315,7 +459,7 @@
           </div>
 
           <!-- Step 5 -->
-          <div class="step-card" role="listitem">
+          <div class="step-card" role="listitem" data-animate="fade-up" data-delay="250">
             <div class="step-indicator">
               <span class="step-index">5</span>
             </div>
@@ -333,7 +477,8 @@
     <!-- SECTION 5: MARKET & PRICING -->
     <section class="section section-market-pricing" id="market-pricing" aria-labelledby="pricing-heading">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-eyebrow">COMMERCIAL MODEL</span>
           <h2 id="pricing-heading" class="section-title">Pricing for UK care homes</h2>
           <p class="section-intro">
             The initial pilot is aimed at West Midlands residential and nursing care homes with existing digital records. After the pilot, the plan prioritises care groups operating 2–15 homes and larger independent operators. Owners and group operations leaders are the commercial buyers. Registered managers, senior carers and staff on shift are the intended day-to-day users.
@@ -341,41 +486,64 @@
         </div>
 
         <!-- Prominent Cards -->
-        <div class="pricing-cards-grid">
+        <div class="pricing-cards-grid" data-animate="fade-up" data-delay="100">
           <!-- Card 1 -->
           <div class="pricing-card card-primary">
-            <div class="pricing-card-header">
+            <div class="pricing-card-badge-row">
               <span class="pricing-pill">Core Service</span>
-              <h3 class="pricing-tier-name">Core Platform Subscription</h3>
+              <span class="pricing-popular-chip">Primary Platform</span>
             </div>
+            <h3 class="pricing-tier-name">Core Platform Subscription</h3>
             <div class="pricing-amount-group">
-              <span class="price-value">£8–£15</span>
-              <span class="price-unit">per bed per month</span>
+              <div class="price-value-row">
+                <span class="price-value">£8–£15</span>
+                <span class="price-unit">per bed per month</span>
+              </div>
+              <span class="price-caption">Predictive care intelligence and workflow tools</span>
             </div>
             <p class="pricing-tier-desc">
               Resident baselines, cross-domain analysis, explainable risk stages, staff review, outcome learning and evidence from recorded actions.
             </p>
+            <div class="pricing-card-action">
+              <a href="#request-a-pilot" class="btn btn-primary btn-block">
+                <span>Request a Pilot</span>
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
           </div>
 
           <!-- Card 2 -->
           <div class="pricing-card card-secondary">
-            <div class="pricing-card-header">
+            <div class="pricing-card-badge-row">
               <span class="pricing-pill">Phase 2 Optional</span>
-              <h3 class="pricing-tier-name">Smart Inventory Add-On</h3>
+              <span class="pricing-optional-chip">Modular Add-On</span>
             </div>
+            <h3 class="pricing-tier-name">Smart Inventory Add-On</h3>
             <div class="pricing-amount-group">
-              <span class="price-value">An additional £3–£6</span>
-              <span class="price-unit">per bed per month</span>
+              <div class="price-value-row">
+                <span class="price-value">An additional £3–£6</span>
+                <span class="price-unit">per bed per month</span>
+              </div>
+              <span class="price-caption">Available in Phase 2 expansion</span>
             </div>
             <p class="pricing-tier-desc">
               Optional Phase 2 add-on for consumption analysis, wastage detection and procurement recommendations.
             </p>
+            <div class="pricing-card-action">
+              <a href="#request-a-pilot" class="btn btn-secondary btn-block">Enquire for Phase 2</a>
+            </div>
           </div>
         </div>
 
-        <!-- Additional Services Table / Stacked List -->
-        <div class="additional-services-wrapper">
-          <h3 class="additional-services-title">Additional Services &amp; Integration</h3>
+        <!-- Additional Services Table / Stacked Cards -->
+        <div class="additional-services-wrapper" data-animate="fade-up" data-delay="150">
+          <div class="additional-services-header">
+            <h3 class="additional-services-title">Additional Services &amp; Integration</h3>
+            <span class="services-caption">Tailored professional services for deployment and enterprise support</span>
+          </div>
           <div class="services-table-container">
             <table class="services-table" aria-label="Additional services pricing and details">
               <thead>
@@ -387,18 +555,30 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row" class="service-name">Implementation and Onboarding</th>
-                  <td class="service-price">One-time, project-based fee</td>
+                  <th scope="row" class="service-name">
+                    <span class="service-name-text">Implementation and Onboarding</span>
+                  </th>
+                  <td class="service-price">
+                    <span class="price-tag">One-time, project-based fee</span>
+                  </td>
                   <td class="service-desc">Initial integration, configuration, staff training and pilot support. The fee is agreed for the project.</td>
                 </tr>
                 <tr>
-                  <th scope="row" class="service-name">Premium Support and Analytics</th>
-                  <td class="service-price">Custom pricing for larger groups</td>
+                  <th scope="row" class="service-name">
+                    <span class="service-name-text">Premium Support and Analytics</span>
+                  </th>
+                  <td class="service-price">
+                    <span class="price-tag">Custom pricing for larger groups</span>
+                  </td>
                   <td class="service-desc">Dedicated account management, custom reporting, priority support and advanced analytics.</td>
                 </tr>
                 <tr>
-                  <th scope="row" class="service-name">API Access and Integration</th>
-                  <td class="service-price">Usage- or volume-based pricing</td>
+                  <th scope="row" class="service-name">
+                    <span class="service-name-text">API Access and Integration</span>
+                  </th>
+                  <td class="service-price">
+                    <span class="price-tag">Usage- or volume-based pricing</span>
+                  </td>
                   <td class="service-desc">Custom connectors, integration support and API access for operator-built dashboards.</td>
                 </tr>
               </tbody>
@@ -407,17 +587,39 @@
         </div>
 
         <!-- Worked Example -->
-        <div class="worked-example-box">
-          <h3 class="worked-example-title">Pilot pricing example</h3>
-          <p class="worked-example-text">
-            The indicative initial pilot rate is approximately £8 per bed per month. For a 40-bed home, that is approximately £320 per month for the core subscription, before any agreed onboarding fee. Across the full core subscription range, a 40-bed home would pay £320–£600 per month.
-          </p>
+        <div class="worked-example-box" data-animate="fade-up" data-delay="200">
+          <div class="worked-example-decor" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+              <line x1="8" y1="6" x2="16" y2="6"></line>
+              <line x1="16" y1="14" x2="16" y2="18"></line>
+              <path d="M16 10h.01"></path>
+              <path d="M12 10h.01"></path>
+              <path d="M8 10h.01"></path>
+              <path d="M12 14h.01"></path>
+              <path d="M8 14h.01"></path>
+              <path d="M12 18h.01"></path>
+              <path d="M8 18h.01"></path>
+            </svg>
+          </div>
+          <div class="worked-example-content">
+            <h3 class="worked-example-title">Pilot pricing example</h3>
+            <p class="worked-example-text">
+              The indicative initial pilot rate is approximately £8 per bed per month. For a 40-bed home, that is approximately £320 per month for the core subscription, before any agreed onboarding fee. Across the full core subscription range, a 40-bed home would pay £320–£600 per month.
+            </p>
+          </div>
         </div>
 
         <!-- REQUEST A PILOT FORM (Inside Market & Pricing with own anchor) -->
-        <div class="pilot-form-section" id="request-a-pilot" aria-labelledby="form-heading">
+        <div class="pilot-form-section" id="request-a-pilot" aria-labelledby="form-heading" data-animate="fade-up" data-delay="250">
           <div class="pilot-form-card">
             <div class="form-header">
+              <div class="form-header-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>WEST MIDLANDS PILOT ENROLMENT</span>
+              </div>
               <h3 id="form-heading" class="form-title">Request a Pilot</h3>
               <p class="form-intro">
                 For care-home managers and operators interested in the planned West Midlands pilot.
@@ -427,64 +629,101 @@
             <form id="pilot-form" novalidate>
               <div class="form-grid">
                 <div class="form-group">
-                  <label for="fullName" class="form-label">Full Name <span class="required-indicator" aria-hidden="true">*</span></label>
-                  <input 
-                    type="text" 
-                    id="fullName" 
-                    name="fullName" 
-                    class="form-input" 
-                    autocomplete="name" 
-                    required 
-                    aria-required="true"
-                  >
+                  <label for="fullName" class="form-label">
+                    <span>Full Name</span>
+                    <span class="required-indicator" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-wrap">
+                    <input 
+                      type="text" 
+                      id="fullName" 
+                      name="fullName" 
+                      class="form-input" 
+                      placeholder="e.g. Sarah Jenkins"
+                      autocomplete="name" 
+                      required 
+                      aria-required="true"
+                    >
+                  </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="phoneNumber" class="form-label">Phone Number <span class="required-indicator" aria-hidden="true">*</span></label>
-                  <input 
-                    type="tel" 
-                    id="phoneNumber" 
-                    name="phoneNumber" 
-                    class="form-input" 
-                    autocomplete="tel" 
-                    required 
-                    aria-required="true"
-                  >
+                  <label for="phoneNumber" class="form-label">
+                    <span>Phone Number</span>
+                    <span class="required-indicator" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-wrap">
+                    <input 
+                      type="tel" 
+                      id="phoneNumber" 
+                      name="phoneNumber" 
+                      class="form-input" 
+                      placeholder="e.g. 0121 496 0123 or +44 7700 900077"
+                      autocomplete="tel" 
+                      required 
+                      aria-required="true"
+                    >
+                  </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="emailAddress" class="form-label">Email Address <span class="required-indicator" aria-hidden="true">*</span></label>
-                  <input 
-                    type="email" 
-                    id="emailAddress" 
-                    name="emailAddress" 
-                    class="form-input" 
-                    autocomplete="email" 
-                    required 
-                    aria-required="true"
-                  >
+                  <label for="emailAddress" class="form-label">
+                    <span>Email Address</span>
+                    <span class="required-indicator" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-wrap">
+                    <input 
+                      type="email" 
+                      id="emailAddress" 
+                      name="emailAddress" 
+                      class="form-input" 
+                      placeholder="e.g. manager@carehome.co.uk"
+                      autocomplete="email" 
+                      required 
+                      aria-required="true"
+                    >
+                  </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="organisationName" class="form-label">Organisation Name <span class="required-indicator" aria-hidden="true">*</span></label>
-                  <input 
-                    type="text" 
-                    id="organisationName" 
-                    name="organisationName" 
-                    class="form-input" 
-                    autocomplete="organization" 
-                    required 
-                    aria-required="true"
-                  >
+                  <label for="organisationName" class="form-label">
+                    <span>Organisation Name</span>
+                    <span class="required-indicator" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-wrap">
+                    <input 
+                      type="text" 
+                      id="organisationName" 
+                      name="organisationName" 
+                      class="form-input" 
+                      placeholder="e.g. Meadow View Care Home"
+                      autocomplete="organization" 
+                      required 
+                      aria-required="true"
+                    >
+                  </div>
                 </div>
               </div>
 
               <div class="form-footer">
-                <p class="form-notice">
-                  This form saves your details in this browser only. It does not send them to the CareSense360 team.
-                </p>
+                <div class="form-notice-box">
+                  <svg class="notice-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                  <p class="form-notice">
+                    This form saves your details in this browser only. It does not send them to the CareSense360 team.
+                  </p>
+                </div>
                 <div class="form-actions">
-                  <button type="submit" class="btn btn-primary btn-submit">Save pilot request</button>
+                  <button type="submit" class="btn btn-primary btn-submit">
+                    <span>Save pilot request</span>
+                    <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                      <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                      <polyline points="7 3 7 8 15 8"></polyline>
+                    </svg>
+                  </button>
                 </div>
                 <div id="pilot-status" class="form-status" role="status" aria-live="polite"></div>
               </div>
@@ -497,15 +736,21 @@
     <!-- SECTION 6: FAQ -->
     <section class="section section-faq" id="faq" aria-labelledby="faq-heading">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-eyebrow">COMMON QUESTIONS</span>
           <h2 id="faq-heading" class="section-title">Frequently asked questions</h2>
+          <p class="section-intro">Everything care operators need to know about the planned platform and pilot.</p>
         </div>
 
-        <div class="faq-accordion" role="region" aria-label="Frequently Asked Questions">
+        <div class="faq-accordion" role="region" aria-label="Frequently Asked Questions" data-animate="fade-up" data-delay="100">
           <details class="faq-item">
             <summary class="faq-question">
               <span>Can we keep our current care-planning system?</span>
-              <span class="faq-chevron" aria-hidden="true"></span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="faq-answer">
               <p>CareSense360 is designed to work alongside a home’s existing systems. During onboarding, the team assesses which care records, medication systems, rostering tools and available sensor feeds can be connected.</p>
@@ -515,7 +760,11 @@
           <details class="faq-item">
             <summary class="faq-question">
               <span>Who decides what happens after an alert?</span>
-              <span class="faq-chevron" aria-hidden="true"></span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="faq-answer">
               <p>A care professional reviews the evidence and decides whether to accept, modify, reject or escalate the recommendation. The decision and any resulting task are recorded.</p>
@@ -525,7 +774,11 @@
           <details class="faq-item">
             <summary class="faq-question">
               <span>How long does it take to learn a resident’s usual pattern?</span>
-              <span class="faq-chevron" aria-hidden="true"></span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="faq-answer">
               <p>The plan estimates approximately two to four weeks of observations for an initial baseline. Timing depends on the frequency and completeness of the resident’s records.</p>
@@ -535,7 +788,11 @@
           <details class="faq-item">
             <summary class="faq-question">
               <span>How is resident information expected to be protected?</span>
-              <span class="faq-chevron" aria-hidden="true"></span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="faq-answer">
               <p>The planned platform design includes UK data hosting, encryption, role-based access and audit logs. Access is intended to reflect each staff member’s responsibilities within the home.</p>
@@ -545,7 +802,11 @@
           <details class="faq-item">
             <summary class="faq-question">
               <span>What is included in the initial pilot?</span>
-              <span class="faq-chevron" aria-hidden="true"></span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="faq-answer">
               <p>The pilot focuses on connecting existing records, learning resident baselines, explaining emerging changes and supporting staff review. Inventory, maintenance and family-facing tools are planned for later phases.</p>
@@ -555,7 +816,11 @@
           <details class="faq-item">
             <summary class="faq-question">
               <span>Who is the initial pilot aimed at?</span>
-              <span class="faq-chevron" aria-hidden="true"></span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="faq-answer">
               <p>The plan targets two to three West Midlands residential or nursing care homes that already use digital care records and are willing to provide feedback during development.</p>
@@ -565,7 +830,11 @@
           <details class="faq-item">
             <summary class="faq-question">
               <span>How much would the pilot cost for a 40-bed home?</span>
-              <span class="faq-chevron" aria-hidden="true"></span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="faq-answer">
               <p>At the indicative pilot rate of approximately £8 per bed per month, the core subscription would be approximately £320 per month for 40 beds, before any agreed onboarding fee.</p>
@@ -581,25 +850,56 @@
     <div class="container footer-container">
       <div class="footer-top">
         <div class="footer-brand">
-          <span class="footer-wordmark">CareSense360</span>
+          <div class="footer-brand-header">
+            <span class="footer-brand-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 3v4"/>
+                <path d="M12 17v4"/>
+                <path d="M3 12h4"/>
+                <path d="M17 12h4"/>
+              </svg>
+            </span>
+            <span class="footer-wordmark">CareSense360</span>
+          </div>
           <p class="footer-description">Predictive care intelligence for UK residential and nursing care homes.</p>
-          <p class="footer-founder">Founded by Puneet Kanthera Dhiman · Birmingham, UK</p>
+          <div class="footer-meta-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span class="footer-founder">Founded by Puneet Kanthera Dhiman · Birmingham, UK</span>
+          </div>
         </div>
 
         <nav class="footer-nav" aria-label="Footer navigation">
-          <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#platform">Platform</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#market-pricing">Market &amp; Pricing</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
+          <div class="footer-nav-col">
+            <span class="footer-nav-heading">Platform Navigation</span>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#platform">Platform</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#market-pricing">Market &amp; Pricing</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
 
       <div class="footer-bottom">
-        <a href="#request-a-pilot" class="btn btn-primary footer-cta">Request a Pilot</a>
+        <div class="footer-bottom-copy">
+          <p>© 2026 CareSense360. Decision support for adult social care.</p>
+        </div>
+        <div class="footer-bottom-action">
+          <a href="#request-a-pilot" class="btn btn-primary footer-cta">
+            <span>Request a Pilot</span>
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>

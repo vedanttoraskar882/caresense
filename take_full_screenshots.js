@@ -102,6 +102,12 @@ async function captureFull() {
     await client.send('Page.navigate', { url: TEST_URL });
     await sleep(1000);
 
+    // Reveal elements for full-page screenshot
+    await client.send('Runtime.evaluate', { 
+      expression: "document.querySelectorAll('[data-animate=\"fade-up\"]').forEach(el => el.classList.add('is-animated'))" 
+    });
+    await sleep(400);
+
     const shot = await client.send('Page.captureScreenshot', {
       format: 'png',
       captureBeyondViewport: true,

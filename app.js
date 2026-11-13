@@ -1,9 +1,38 @@
 /**
  * CareSense360 Landing Page Script
- * Fully client-side interactive logic
+ * Fully client-side interactive logic & purposeful animations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // --- Subtle Scroll Entrance Animations (Progressive Enhancement) ---
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !prefersReducedMotion) {
+    document.documentElement.classList.add('js-animate');
+    const animatedElements = document.querySelectorAll('[data-animate="fade-up"]');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const delay = el.getAttribute('data-delay');
+          if (delay) {
+            setTimeout(() => {
+              el.classList.add('is-animated');
+            }, parseInt(delay, 10));
+          } else {
+            el.classList.add('is-animated');
+          }
+          observer.unobserve(el);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px 40px 0px',
+      threshold: 0.05
+    });
+
+    animatedElements.forEach((el) => observer.observe(el));
+  }
+
   // --- Mobile Navigation Functionality ---
   const menuToggle = document.getElementById('mobile-menu-toggle');
   const mobileNav = document.getElementById('mobile-nav');
