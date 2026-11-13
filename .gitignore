@@ -1,0 +1,8 @@
+# Logs and temp files
+*.log
+.temp_*
+node_modules/
+
+# OS metadata
+.DS_Store
+Thumbs.db

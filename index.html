@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareSense360 — Decision-Support Platform for UK Care Homes</title>
+  <meta name="description" content="CareSense360 is being developed to bring care notes, medication records and staffing information together for UK residential and nursing care homes.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#home" class="wordmark" aria-label="CareSense360 Home">CareSense360</a>
+      
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#market-pricing">Market &amp; Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="#request-a-pilot" class="btn btn-primary nav-cta">Request a Pilot</a>
+      </nav>
+
+      <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <ul class="mobile-nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#platform">Platform</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#market-pricing">Market &amp; Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="mobile-nav-cta">
+        <a href="#request-a-pilot" class="btn btn-primary btn-block">Request a Pilot</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- SECTION 1: HOME -->
+    <section class="section section-home" id="home" aria-labelledby="home-heading">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 id="home-heading" class="hero-title">Spot changes in a resident’s usual routine earlier.</h1>
+          <p class="hero-description">
+            CareSense360 is being developed to bring care notes, medication records and staffing information together. When observations across shifts suggest a change in a resident’s usual pattern, the platform shows the care team what changed and why it warrants review. A care professional decides what happens next.
+          </p>
+          <div class="hero-actions">
+            <a href="#request-a-pilot" class="btn btn-primary">Request a Pilot</a>
+            <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+          </div>
+          <p class="hero-footnote">
+            The initial pilot is planned for two to three West Midlands care homes that already use digital care records.
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <div class="illustrative-card" aria-label="Illustrative example of carer observations">
+            <div class="illustrative-card-header">
+              <span class="badge badge-neutral">Illustrative example</span>
+            </div>
+            <h2 class="illustrative-card-title">A change across shifts</h2>
+            <div class="timeline" role="list" aria-label="Shift observations timeline">
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <p class="timeline-text">Day shift · Breakfast intake lower than usual</p>
+                </div>
+              </div>
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <p class="timeline-text">Night shift · More disturbed nights recorded</p>
+                </div>
+              </div>
+            </div>
+            <div class="illustrative-review-box">
+              <span class="review-label">Review note:</span>
+              <p class="review-text">A senior carer reviews both observations against the resident’s usual routine and records the outcome.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT -->
+    <section class="section section-about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="about-heading" class="section-title">A clearer picture across care shifts</h2>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-text-column">
+            <p class="lead-text">
+              A carer may notice that a resident has eaten less breakfast than usual. A colleague on the night shift may record disrupted sleep. Each observation has context of its own. Seeing them together, over several days and alongside the resident’s usual routine, gives a senior carer a clearer basis for deciding whether to follow up.
+            </p>
+            <p class="secondary-text">
+              CareSense360 is designed to work alongside the care-planning, medication and staffing systems a home already uses. Its purpose is to bring relevant observations together, explain emerging changes and help staff follow an agreed action through to its outcome.
+            </p>
+          </div>
+
+          <div class="founder-card" aria-labelledby="founder-name">
+            <div class="founder-header">
+              <div class="founder-identity">
+                <h3 id="founder-name" class="founder-name">Puneet Kanthera Dhiman</h3>
+                <p class="founder-role">Founder and Director</p>
+                <p class="founder-location">Birmingham, UK</p>
+              </div>
+            </div>
+            <div class="founder-body">
+              <p>
+                Puneet Kanthera Dhiman is the sole founder and director of CareSense360. His background includes managing renovation projects, coordinating teams and schedules, overseeing budgets and working directly with clients. He studied International Business Management at Coventry University, with MSc studies covering data analytics and forecasting. His planned responsibilities include business strategy, pilot partnerships and commercial delivery, supported by specialist clinical, software and data professionals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PLATFORM -->
+    <section class="section section-platform" id="platform" aria-labelledby="platform-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="platform-heading" class="section-title">What the platform will do</h2>
+        </div>
+
+        <!-- Phase 1: Initial Pilot (Prominent) -->
+        <div class="platform-phase phase-initial">
+          <div class="phase-heading-group">
+            <span class="phase-badge phase-badge-highlight">Year 1 · Initial pilot</span>
+            <p class="phase-subtitle">Core modules planned for the initial care-home pilot.</p>
+          </div>
+          <div class="modules-grid pilot-modules">
+            <div class="module-card card-featured">
+              <div class="module-header">
+                <span class="module-number">01</span>
+                <h3 class="module-title">Data Intake and Normalisation</h3>
+              </div>
+              <p class="module-description">
+                Brings available care-planning records, electronic medication administration records (eMAR), rostering information and available sensor records into a common format. Checks data quality so observations can be compared across systems and shifts.
+              </p>
+            </div>
+
+            <div class="module-card card-featured">
+              <div class="module-header">
+                <span class="module-number">02</span>
+                <h3 class="module-title">Resident Baseline and Risk Engine</h3>
+              </div>
+              <p class="module-description">
+                Builds a picture of each resident’s usual food intake, sleep, mobility and behaviour. Looks for related changes over time and shows the observations that prompted a concern.
+              </p>
+            </div>
+
+            <div class="module-card card-featured">
+              <div class="module-header">
+                <span class="module-number">03</span>
+                <h3 class="module-title">Human Validation and Task Workflow</h3>
+              </div>
+              <p class="module-description">
+                Routes a recommendation to the appropriate care professional. Staff can accept, modify, reject or escalate it. Agreed actions become assigned tasks, with the decision and outcome recorded.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expansion Phases (Year 2 & Year 3) -->
+        <div class="platform-expansion-group">
+          <!-- Phase 2 -->
+          <div class="platform-phase phase-expansion">
+            <div class="phase-heading-group">
+              <span class="phase-badge">Year 2 · Planned expansion</span>
+            </div>
+            <div class="modules-grid expansion-modules">
+              <div class="module-card">
+                <div class="module-header">
+                  <span class="module-number">04</span>
+                  <h3 class="module-title">Smart Inventory and Procurement</h3>
+                </div>
+                <p class="module-description">
+                  Examines consumption of medicines, food and care supplies. Flags unusual usage or possible wastage and recommends purchasing actions for staff approval.
+                </p>
+              </div>
+
+              <div class="module-card">
+                <div class="module-header">
+                  <span class="module-number">05</span>
+                  <h3 class="module-title">Maintenance and Compliance Evidence</h3>
+                </div>
+                <p class="module-description">
+                  Supports preventive maintenance scheduling and helps managers organise records and evidence for Care Quality Commission (CQC) inspections.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="platform-phase phase-expansion">
+            <div class="phase-heading-group">
+              <span class="phase-badge">Year 3 · Planned expansion</span>
+            </div>
+            <div class="modules-grid expansion-modules single-module">
+              <div class="module-card">
+                <div class="module-header">
+                  <span class="module-number">06</span>
+                  <h3 class="module-title">Family Portal and Outcome Reporting</h3>
+                </div>
+                <p class="module-description">
+                  Gives families access to information appropriate to share and gives operators reporting on recorded outcomes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: HOW IT WORKS -->
+    <section class="section section-how-it-works" id="how-it-works" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="how-heading" class="section-title">From a care note to a reviewed action</h2>
+        </div>
+
+        <div class="workflow-steps" role="list" aria-label="CareSense360 decision-support sequence">
+          <!-- Step 1 -->
+          <div class="step-card" role="listitem">
+            <div class="step-indicator">
+              <span class="step-index">1</span>
+            </div>
+            <div class="step-content">
+              <h3 class="step-title">Connect existing records</h3>
+              <p class="step-description">
+                The home identifies its available sources. Relevant care, medication, staffing and available sensor records are brought into a common format and checked for quality.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card" role="listitem">
+            <div class="step-indicator">
+              <span class="step-index">2</span>
+            </div>
+            <div class="step-content">
+              <h3 class="step-title">Learn each resident’s usual pattern</h3>
+              <p class="step-description">
+                An initial baseline is expected to take approximately two to four weeks of observations. Timing depends on how frequently and completely the home records information.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card" role="listitem">
+            <div class="step-indicator">
+              <span class="step-index">3</span>
+            </div>
+            <div class="step-content">
+              <h3 class="step-title">Identify and explain a change</h3>
+              <p class="step-description">
+                The platform compares recent observations with the resident’s baseline and shows the evidence behind a concern. Display the four stages in this exact order:
+              </p>
+              <div class="risk-stages-wrapper" aria-label="Four explainable risk stages">
+                <ol class="risk-stages-list">
+                  <li class="stage-item stage-normal">
+                    <span class="stage-dot" aria-hidden="true"></span>
+                    <span class="stage-label">Normal</span>
+                  </li>
+                  <li class="stage-divider" aria-hidden="true">→</li>
+                  <li class="stage-item stage-emerging">
+                    <span class="stage-dot" aria-hidden="true"></span>
+                    <span class="stage-label">Emerging Change</span>
+                  </li>
+                  <li class="stage-divider" aria-hidden="true">→</li>
+                  <li class="stage-item stage-increasing">
+                    <span class="stage-dot" aria-hidden="true"></span>
+                    <span class="stage-label">Increasing Risk</span>
+                  </li>
+                  <li class="stage-divider" aria-hidden="true">→</li>
+                  <li class="stage-item stage-high">
+                    <span class="stage-dot" aria-hidden="true"></span>
+                    <span class="stage-label">High Concern</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card" role="listitem">
+            <div class="step-indicator">
+              <span class="step-index">4</span>
+            </div>
+            <div class="step-content">
+              <h3 class="step-title">Ask a care professional to review</h3>
+              <p class="step-description">
+                The appropriate staff member examines the evidence and can accept, modify, reject or escalate the recommendation. The planned workflow includes a separate pathway for time-critical safety events.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="step-card" role="listitem">
+            <div class="step-indicator">
+              <span class="step-index">5</span>
+            </div>
+            <div class="step-content">
+              <h3 class="step-title">Record the action and its outcome</h3>
+              <p class="step-description">
+                Staff assign and track an agreed action, then record what happened. An ordinary explanation or false alarm is also valuable feedback. Recorded outcomes help refine future alerts for that resident and leave an audit trail across shifts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: MARKET & PRICING -->
+    <section class="section section-market-pricing" id="market-pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="pricing-heading" class="section-title">Pricing for UK care homes</h2>
+          <p class="section-intro">
+            The initial pilot is aimed at West Midlands residential and nursing care homes with existing digital records. After the pilot, the plan prioritises care groups operating 2–15 homes and larger independent operators. Owners and group operations leaders are the commercial buyers. Registered managers, senior carers and staff on shift are the intended day-to-day users.
+          </p>
+        </div>
+
+        <!-- Prominent Cards -->
+        <div class="pricing-cards-grid">
+          <!-- Card 1 -->
+          <div class="pricing-card card-primary">
+            <div class="pricing-card-header">
+              <span class="pricing-pill">Core Service</span>
+              <h3 class="pricing-tier-name">Core Platform Subscription</h3>
+            </div>
+            <div class="pricing-amount-group">
+              <span class="price-value">£8–£15</span>
+              <span class="price-unit">per bed per month</span>
+            </div>
+            <p class="pricing-tier-desc">
+              Resident baselines, cross-domain analysis, explainable risk stages, staff review, outcome learning and evidence from recorded actions.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="pricing-card card-secondary">
+            <div class="pricing-card-header">
+              <span class="pricing-pill">Phase 2 Optional</span>
+              <h3 class="pricing-tier-name">Smart Inventory Add-On</h3>
+            </div>
+            <div class="pricing-amount-group">
+              <span class="price-value">An additional £3–£6</span>
+              <span class="price-unit">per bed per month</span>
+            </div>
+            <p class="pricing-tier-desc">
+              Optional Phase 2 add-on for consumption analysis, wastage detection and procurement recommendations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Additional Services Table / Stacked List -->
+        <div class="additional-services-wrapper">
+          <h3 class="additional-services-title">Additional Services &amp; Integration</h3>
+          <div class="services-table-container">
+            <table class="services-table" aria-label="Additional services pricing and details">
+              <thead>
+                <tr>
+                  <th scope="col">Offering</th>
+                  <th scope="col">Price to display</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="service-name">Implementation and Onboarding</th>
+                  <td class="service-price">One-time, project-based fee</td>
+                  <td class="service-desc">Initial integration, configuration, staff training and pilot support. The fee is agreed for the project.</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="service-name">Premium Support and Analytics</th>
+                  <td class="service-price">Custom pricing for larger groups</td>
+                  <td class="service-desc">Dedicated account management, custom reporting, priority support and advanced analytics.</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="service-name">API Access and Integration</th>
+                  <td class="service-price">Usage- or volume-based pricing</td>
+                  <td class="service-desc">Custom connectors, integration support and API access for operator-built dashboards.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Worked Example -->
+        <div class="worked-example-box">
+          <h3 class="worked-example-title">Pilot pricing example</h3>
+          <p class="worked-example-text">
+            The indicative initial pilot rate is approximately £8 per bed per month. For a 40-bed home, that is approximately £320 per month for the core subscription, before any agreed onboarding fee. Across the full core subscription range, a 40-bed home would pay £320–£600 per month.
+          </p>
+        </div>
+
+        <!-- REQUEST A PILOT FORM (Inside Market & Pricing with own anchor) -->
+        <div class="pilot-form-section" id="request-a-pilot" aria-labelledby="form-heading">
+          <div class="pilot-form-card">
+            <div class="form-header">
+              <h3 id="form-heading" class="form-title">Request a Pilot</h3>
+              <p class="form-intro">
+                For care-home managers and operators interested in the planned West Midlands pilot.
+              </p>
+            </div>
+
+            <form id="pilot-form" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fullName" class="form-label">Full Name <span class="required-indicator" aria-hidden="true">*</span></label>
+                  <input 
+                    type="text" 
+                    id="fullName" 
+                    name="fullName" 
+                    class="form-input" 
+                    autocomplete="name" 
+                    required 
+                    aria-required="true"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="phoneNumber" class="form-label">Phone Number <span class="required-indicator" aria-hidden="true">*</span></label>
+                  <input 
+                    type="tel" 
+                    id="phoneNumber" 
+                    name="phoneNumber" 
+                    class="form-input" 
+                    autocomplete="tel" 
+                    required 
+                    aria-required="true"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="emailAddress" class="form-label">Email Address <span class="required-indicator" aria-hidden="true">*</span></label>
+                  <input 
+                    type="email" 
+                    id="emailAddress" 
+                    name="emailAddress" 
+                    class="form-input" 
+                    autocomplete="email" 
+                    required 
+                    aria-required="true"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="organisationName" class="form-label">Organisation Name <span class="required-indicator" aria-hidden="true">*</span></label>
+                  <input 
+                    type="text" 
+                    id="organisationName" 
+                    name="organisationName" 
+                    class="form-input" 
+                    autocomplete="organization" 
+                    required 
+                    aria-required="true"
+                  >
+                </div>
+              </div>
+
+              <div class="form-footer">
+                <p class="form-notice">
+                  This form saves your details in this browser only. It does not send them to the CareSense360 team.
+                </p>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary btn-submit">Save pilot request</button>
+                </div>
+                <div id="pilot-status" class="form-status" role="status" aria-live="polite"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FAQ -->
+    <section class="section section-faq" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="faq-heading" class="section-title">Frequently asked questions</h2>
+        </div>
+
+        <div class="faq-accordion" role="region" aria-label="Frequently Asked Questions">
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can we keep our current care-planning system?</span>
+              <span class="faq-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>CareSense360 is designed to work alongside a home’s existing systems. During onboarding, the team assesses which care records, medication systems, rostering tools and available sensor feeds can be connected.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Who decides what happens after an alert?</span>
+              <span class="faq-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>A care professional reviews the evidence and decides whether to accept, modify, reject or escalate the recommendation. The decision and any resulting task are recorded.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How long does it take to learn a resident’s usual pattern?</span>
+              <span class="faq-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>The plan estimates approximately two to four weeks of observations for an initial baseline. Timing depends on the frequency and completeness of the resident’s records.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How is resident information expected to be protected?</span>
+              <span class="faq-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>The planned platform design includes UK data hosting, encryption, role-based access and audit logs. Access is intended to reflect each staff member’s responsibilities within the home.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What is included in the initial pilot?</span>
+              <span class="faq-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>The pilot focuses on connecting existing records, learning resident baselines, explaining emerging changes and supporting staff review. Inventory, maintenance and family-facing tools are planned for later phases.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Who is the initial pilot aimed at?</span>
+              <span class="faq-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>The plan targets two to three West Midlands residential or nursing care homes that already use digital care records and are willing to provide feedback during development.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How much would the pilot cost for a 40-bed home?</span>
+              <span class="faq-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>At the indicative pilot rate of approximately £8 per bed per month, the core subscription would be approximately £320 per month for 40 beds, before any agreed onboarding fee.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION 7: FOOTER -->
+  <footer class="site-footer" id="footer" aria-label="CareSense360 Footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-wordmark">CareSense360</span>
+          <p class="footer-description">Predictive care intelligence for UK residential and nursing care homes.</p>
+          <p class="footer-founder">Founded by Puneet Kanthera Dhiman · Birmingham, UK</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#platform">Platform</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#market-pricing">Market &amp; Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <a href="#request-a-pilot" class="btn btn-primary footer-cta">Request a Pilot</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
