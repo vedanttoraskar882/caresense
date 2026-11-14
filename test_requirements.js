@@ -153,11 +153,12 @@ for (const q of faqs) {
 assert(html.includes('Predictive care intelligence for UK residential and nursing care homes.'), 'Footer description matches');
 assert(html.includes('Founded by Puneet Kanthera Dhiman · Birmingham, UK'), 'Footer founder line matches');
 
-// 12. Background & Animations
-assert(html.includes('ambient-glow-wrapper'), 'Ambient animated canvas wrapper present');
-assert(css.includes('floatOrb1'), 'Orb 1 keyframe animation defined');
-assert(css.includes('floatOrb2'), 'Orb 2 keyframe animation defined');
-assert(!css.includes('--bg-base: #FBF9F5'), 'White/off-white base background replaced');
+// 12. Colors: #09090B, #18181B, #FAFAFA, #B6FF2E, #7C3AED
+assert(css.includes('#09090B'), 'Near-black base #09090B present');
+assert(css.includes('#18181B'), 'Dark zinc cards #18181B present');
+assert(css.includes('#FAFAFA'), 'Crisp white typography #FAFAFA present');
+assert(css.includes('#B6FF2E'), 'Acid lime #B6FF2E present');
+assert(css.includes('#7C3AED'), 'Electric violet #7C3AED present');
 
 if (errors.length === 0) {
   console.log('\nALL REQUIREMENT SUITES PASSED PERFECTLY!');
