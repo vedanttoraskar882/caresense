@@ -261,7 +261,7 @@ async function runTests() {
     return status;
   })()`);
 
-  assert(sub1 === 'Your pilot request has been saved in this browser.', `Submission 1 success message displayed: "${sub1}"`);
+  assert(sub1 === 'Your pilot request has been sent successfully.', `Submission 1 success message displayed: "${sub1}"`);
   
   // Verify network requests during submission
   const postRequests = client.networkRequests.filter(u => !u.includes('localhost:8085') && !u.includes('fonts.'));
@@ -286,7 +286,7 @@ async function runTests() {
     return status;
   })()`);
 
-  assert(sub2 === 'Your pilot request has been saved in this browser.', `Submission 2 success message displayed: "${sub2}"`);
+  assert(sub2 === 'Your pilot request has been sent successfully.', `Submission 2 success message displayed: "${sub2}"`);
 
   // Inspect localStorage
   const storedData = await client.eval(`(() => {

@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       form.reset();
       status.setAttribute('data-state', 'success');
-      status.textContent = 'Your pilot request has been saved in this browser.';
+      status.textContent = 'Your pilot request has been sent successfully.';
     } catch {
       status.setAttribute('data-state', 'error');
       status.textContent =

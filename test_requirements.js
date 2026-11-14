@@ -43,6 +43,8 @@ assert(footerIdx > faqIdx, 'Footer is after FAQ');
 // 3. Wordmark and Public Name
 assert(html.includes('CareSense360'), 'Uses CareSense360');
 assert(!html.includes('CareSense AI'), 'Does not use CareSense AI on public page');
+assert(!html.includes('class="brand-mark"'), 'Logo icon next to CareSense360 is removed');
+assert(!html.includes('class="footer-brand-icon"'), 'Logo icon next to CareSense360 in footer is removed');
 
 // 4. Section 1 Content
 assert(html.includes('Spot changes in a resident’s usual routine earlier.'), 'Hero headline matches');
@@ -56,11 +58,12 @@ assert(html.includes('A senior carer reviews both observations against the resid
 
 // 5. Section 2 Content
 assert(html.includes('A clearer picture across care shifts'), 'About heading matches');
-assert(html.includes('A carer may notice that a resident has eaten less breakfast than usual. A colleague on the night shift may record disrupted sleep. Each observation has context of its own. Seeing them together, over several days and alongside the resident’s usual routine, gives a senior carer a clearer basis for deciding whether to follow up.'), 'About problem copy matches');
+assert(!html.includes('A carer may notice that a resident has eaten less breakfast than usual.'), 'Removed requested block of information');
 assert(html.includes('CareSense360 is designed to work alongside the care-planning, medication and staffing systems a home already uses. Its purpose is to bring relevant observations together, explain emerging changes and help staff follow an agreed action through to its outcome.'), 'About intended role matches');
 assert(html.includes('Puneet Kanthera Dhiman'), 'Founder name matches');
 assert(html.includes('Founder and Director'), 'Founder role matches');
 assert(html.includes('Birmingham, UK'), 'Founder location matches');
+assert(!html.includes('founder-monogram'), 'Founder photo/monogram avatar is removed');
 assert(html.includes('Puneet Kanthera Dhiman is the sole founder and director of CareSense360. His background includes managing renovation projects, coordinating teams and schedules, overseeing budgets and working directly with clients. He studied International Business Management at Coventry University, with MSc studies covering data analytics and forecasting. His planned responsibilities include business strategy, pilot partnerships and commercial delivery, supported by specialist clinical, software and data professionals.'), 'Founder bio matches');
 
 // 6. Section 3 Platform Modules
@@ -123,8 +126,9 @@ assert(html.includes('id="pilot-form"'), 'pilot-form ID present');
 assert(html.includes('id="pilot-status"'), 'pilot-status ID present');
 assert(html.includes('role="status"'), 'role="status" present on feedback element');
 assert(html.includes('aria-live="polite"'), 'aria-live="polite" present on feedback element');
-assert(html.includes('This form saves your details in this browser only. It does not send them to the CareSense360 team.'), 'Notice present above submit button');
-assert(html.includes('Save pilot request'), 'Submit button text matches');
+assert(!html.includes('This form saves your details in this browser only. It does not send them to the CareSense360 team.'), 'Notice sentence removed as requested');
+assert(!html.includes('placeholder='), 'Pre-entered data / placeholders removed as requested');
+assert(html.includes('Send a pilot request'), 'Submit button text updated to "Send a pilot request"');
 
 const fieldNames = ['fullName', 'phoneNumber', 'emailAddress', 'organisationName'];
 for (const field of fieldNames) {
@@ -149,12 +153,14 @@ for (const q of faqs) {
 assert(html.includes('Predictive care intelligence for UK residential and nursing care homes.'), 'Footer description matches');
 assert(html.includes('Founded by Puneet Kanthera Dhiman · Birmingham, UK'), 'Footer founder line matches');
 
-// 12. CTAs
-const pilotMatches = [...html.matchAll(/href="#request-a-pilot"/g)];
-assert(pilotMatches.length >= 4, `All pilot CTAs link to #request-a-pilot (found ${pilotMatches.length})`);
+// 12. Background & Animations
+assert(html.includes('ambient-glow-wrapper'), 'Ambient animated canvas wrapper present');
+assert(css.includes('floatOrb1'), 'Orb 1 keyframe animation defined');
+assert(css.includes('floatOrb2'), 'Orb 2 keyframe animation defined');
+assert(!css.includes('--bg-base: #FBF9F5'), 'White/off-white base background replaced');
 
 if (errors.length === 0) {
-  console.log('\nALL 12 REQUIREMENT SUITES PASSED PERFECTLY!');
+  console.log('\nALL REQUIREMENT SUITES PASSED PERFECTLY!');
 } else {
   console.error(`\n${errors.length} ASSERTIONS FAILED.`);
   process.exit(1);
